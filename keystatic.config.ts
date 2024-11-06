@@ -44,6 +44,7 @@ export default config({
     },
     about: {
       label: "About",
+      entryLayout: "content",
       format: { contentField: "content" },
       schema: {
         content: fields.markdoc({
@@ -59,6 +60,7 @@ export default config({
     },
     contact: {
       label: "Contact",
+      entryLayout: "content",
       format: { contentField: "content" },
       schema: {
         content: fields.markdoc({

@@ -1,7 +1,9 @@
 title: Ivo Schouten
 description: Please change this to a more relevant description.
 carousel:
-  - label: Odido Banner
+  - label: Morbi blandit egestas
     image: /images/carousel/carousel/0/image.jpg
-  - label: Pinkys and Brains
-    image: /images/carousel/carousel/1/image.webp
+  - label: Pellentesque habitant
+    image: /images/carousel/carousel/1/image.jpg
+  - label: Curabitur elit nisi
+    image: /images/carousel/carousel/2/image.jpg
