@@ -16,7 +16,7 @@ export default async function Page() {
         <h1 className="text-2xl font-bold text-center">Ivo's Work.</h1>
         <p className="text-center">A list of my works and projects.</p>
       </div>
-      <ul className="grid grid-cols-2 gap-8">
+      <ul className="grid grid-cols-1 sm:grid-cols-2 gap-8">
         {posts.map((post) => (
           <li key={post.slug}>
             <Link href={`/works/${post.slug}`} className="space-y-4">
@@ -25,7 +25,7 @@ export default async function Page() {
                 alt={post.entry.title}
                 width={320}
                 height={180}
-                className="w-full h-48 object-cover"
+                className="w-full h-56 object-cover"
               />
               <div>
                 <h2 className="underline underline-offset-2 font-semibold text-lg">

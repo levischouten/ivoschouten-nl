@@ -23,7 +23,7 @@ export default function Layout({
   return (
     <main className="flex flex-col gap-8 p-4 items-center w-screen">
       <Header items={ITEMS} />
-      <div className="w-full max-w-screen-md py-8">{children}</div>
+      <div className="w-full max-w-screen-md py-8 px-4">{children}</div>
     </main>
   );
 }
