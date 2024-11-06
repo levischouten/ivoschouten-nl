@@ -17,8 +17,6 @@ import { Metadata } from "next";
 const reader = createReader(process.cwd(), keystaticConfig);
 
 export async function generateStaticParams() {
-  const reader = createReader(process.cwd(), keystaticConfig);
-
   const works = await reader.collections.works.list();
 
   return works.map((slug) => ({
@@ -26,7 +24,10 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function Post({ params }: { params: { slug: string } }) {
+export default async function Post(props: {
+  params: Promise<{ slug: string }>;
+}) {
+  const params = await props.params;
   const post = await reader.collections.works.read(await params.slug);
 
   if (!post) {
@@ -63,6 +64,7 @@ export default async function Post({ params }: { params: { slug: string } }) {
         </p>
       </div>
 
+      {/* @ts-ignore */}
       {Markdoc.renderers.react(renderable, React)}
     </div>
   );

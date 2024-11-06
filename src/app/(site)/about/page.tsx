@@ -18,5 +18,6 @@ export default async function About() {
 
   const renderable = Markdoc.transform(node);
 
+  // @ts-ignore
   return Markdoc.renderers.react(renderable, React);
 }

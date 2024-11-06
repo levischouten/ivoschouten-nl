@@ -1,3 +1,4 @@
+import { Header } from "@/components/header";
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -8,14 +9,30 @@ import {
 import { ResolvingMetadata } from "next";
 import Link from "next/link";
 
+const ITEMS = [
+  {
+    label: "Works",
+    href: "/works",
+  },
+  {
+    label: "About",
+    href: "/about",
+  },
+  {
+    label: "Contact",
+    href: "/contact",
+  },
+];
+
 export default function Layout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <main className="flex flex-col gap-8 p-8 items-center w-screen">
-      <header className="flex justify-between items-center max-w-screen-lg w-full">
+    <main className="flex flex-col gap-8 p-4 items-center w-screen">
+      <Header items={ITEMS} />
+      {/* <header className="flex justify-between items-center max-w-screen-lg w-full">
         <Link href="/" className="font-bold text-xl">
           Ivo Schouten
         </Link>
@@ -44,7 +61,7 @@ export default function Layout({
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
-      </header>
+      </header> */}
       <div className="w-full max-w-screen-md py-8">{children}</div>
     </main>
   );
