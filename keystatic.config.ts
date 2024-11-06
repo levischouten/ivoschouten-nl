@@ -4,9 +4,12 @@ export default config({
   storage: {
     kind: process.env.NODE_ENV === "development" ? "local" : "cloud",
   },
+  cloud: {
+    project: "ivo-schouten/ivoschouten-nl",
+  },
   ui: {
     brand: {
-      name: "Wansuda",
+      name: "Ivo Schouten",
     },
     navigation: {
       Pages: ["home", "about", "contact"],
