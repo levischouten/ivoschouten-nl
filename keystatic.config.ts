@@ -82,6 +82,7 @@ export default config({
       entryLayout: "content",
       path: "src/content/works/*",
       format: { contentField: "content" },
+      columns: ["title", "date"],
       schema: {
         title: fields.slug({ name: { label: "Title" } }),
         image: fields.image({
