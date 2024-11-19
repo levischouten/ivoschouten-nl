@@ -8,7 +8,7 @@ export default async function Home() {
   const home = await reader.singletons.home.readOrThrow();
 
   return (
-    <div className="flex justify-center w-full">
+    <div className="flex justify-center w-full h-full">
       <ImageCarousel items={home.carousel as ImageCarouselProps["items"]} />
     </div>
   );

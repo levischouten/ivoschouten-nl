@@ -15,26 +15,26 @@ export function ImageCarousel(props: ImageCarouselProps) {
 
   return (
     <Carousel
-      className="w-full max-w-xl"
+      className="w-full max-w-xl relative h-full"
       opts={{
         loop: true,
       }}
       plugins={[
         Autoplay({
-          delay: 2000,
+          delay: 3000,
         }),
       ]}
     >
-      <CarouselContent>
+      <CarouselContent className="h-full">
         {items.map((item, index) => (
-          <CarouselItem key={index}>
-            <div className="h-full flex flex-col gap-2">
+          <CarouselItem key={index} className="relative h-full">
+            <div className="flex flex-col gap-2 max-h-[500px] h-full">
               <Image
                 src={item.image}
                 alt={item.label}
-                width={600}
-                height={600}
-                className="w-full h-full object-cover"
+                width={500}
+                height={500}
+                className="w-auto h-full object-contain"
               />
               <p className="text-center">{item.label}</p>
             </div>

@@ -58,7 +58,7 @@ export function Header(props: HeaderProps) {
   const pathname = usePathname();
 
   return (
-    <header className="sticky inset-0 z-50 p-4 mx-auto flex w-full max-w-screen-lg items-center justify-between bg-background lg:relative">
+    <header className="sticky inset-0 z-50 p-8 mx-auto flex w-full max-w-screen-lg items-center justify-between bg-background lg:relative">
       <Link href="/" className="font-bold text-xl">
         Ivo Schouten
       </Link>

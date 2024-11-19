@@ -21,9 +21,11 @@ export default function Layout({
   children: React.ReactNode;
 }>) {
   return (
-    <main className="flex flex-col gap-8 p-4 items-center w-screen">
+    <main className="flex flex-col gap-8 items-center w-screen h-screen">
       <Header items={ITEMS} />
-      <div className="w-full max-w-screen-md py-8 px-4">{children}</div>
+      <div className="w-full max-w-screen-md flex-auto min-h-0 px-8">
+        {children}
+      </div>
     </main>
   );
 }
