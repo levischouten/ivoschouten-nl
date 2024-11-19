@@ -7,3 +7,5 @@ carousel:
     image: /images/carousel/carousel/1/image.jpg
   - label: Pellentesque habitant
     image: /images/carousel/carousel/2/image.jpg
+  - label: Test
+    image: /images/carousel/carousel/3/image.jpg
