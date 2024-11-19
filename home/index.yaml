@@ -1,8 +1,6 @@
 title: Ivo Schouten
 description: Please change this to a more relevant description.
 carousel:
-  - label: Grid Together 3D
-    image: /images/carousel/carousel/0/image.jpg
-  - label: Test
-    image: /images/carousel/carousel/1/image.jpg
+  - image: /images/carousel/carousel/0/image.jpg
+  - image: /images/carousel/carousel/1/image.jpg
   - image: /images/carousel/carousel/2/image.jpg
