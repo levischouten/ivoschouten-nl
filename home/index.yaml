@@ -1,11 +1,13 @@
 title: Ivo Schouten
 description: Please change this to a more relevant description.
 carousel:
-  - label: Morbi blandit egestas
+  - label: Grid Together 3D
     image: /images/carousel/carousel/0/image.jpg
-  - label: Curabitur elit nisi
-    image: /images/carousel/carousel/1/image.jpg
-  - label: Pellentesque habitant
-    image: /images/carousel/carousel/2/image.jpg
   - label: Test
+    image: /images/carousel/carousel/1/image.jpg
+  - label: Morbi blandit egestas
+    image: /images/carousel/carousel/2/image.jpg
+  - label: Curabitur elit nisi
     image: /images/carousel/carousel/3/image.jpg
+  - label: Pellentesque habitant
+    image: /images/carousel/carousel/4/image.jpg
