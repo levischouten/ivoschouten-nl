@@ -15,7 +15,7 @@ export function ImageCarousel(props: ImageCarouselProps) {
 
   return (
     <Carousel
-      className="w-full max-w-xl relative h-full"
+      className="w-full max-w-xl relative h-full pb-8"
       opts={{
         loop: true,
       }}
@@ -28,7 +28,7 @@ export function ImageCarousel(props: ImageCarouselProps) {
       <CarouselContent className="h-full">
         {items.map((item, index) => (
           <CarouselItem key={index} className="relative h-full">
-            <div className="flex flex-col gap-2 max-h-[500px] h-full">
+            <div className="flex flex-col gap-2 max-h-[500px] h-full max-w-[500px] w-full mx-auto">
               <Image
                 src={item.image}
                 alt={item.label}
