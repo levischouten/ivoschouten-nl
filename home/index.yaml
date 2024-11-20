@@ -11,11 +11,11 @@ carousel:
     image: /images/carousel/carousel/3/image.jpg
   - label: grid together
     image: /images/carousel/carousel/4/image.jpg
-  - label: cube obj outline
-    image: /images/carousel/carousel/5/image.jpg
   - label: artlab overview
-    image: /images/carousel/carousel/6/image.jpg
+    image: /images/carousel/carousel/5/image.jpg
   - label: braun obj
+    image: /images/carousel/carousel/6/image.jpg
+  - label: cube obj outline
     image: /images/carousel/carousel/7/image.jpg
   - label: iCOON balk
     image: /images/carousel/carousel/8/image.jpg
