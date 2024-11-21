@@ -82,7 +82,7 @@ export default config({
       entryLayout: "content",
       path: "src/content/works/*",
       format: { contentField: "content" },
-      columns: ["title", "date"],
+      columns: ["title"],
       schema: {
         title: fields.slug({ name: { label: "Title" } }),
         image: fields.image({
@@ -91,15 +91,6 @@ export default config({
           publicPath: "/images/works/",
           description: "Cover image of the work",
           validation: { isRequired: true },
-        }),
-        description: fields.text({
-          label: "Description",
-          multiline: true,
-          description: "Short description of the work",
-        }),
-        date: fields.date({
-          label: "Date",
-          description: "Date of the work",
         }),
         content: fields.markdoc({
           label: "Content",

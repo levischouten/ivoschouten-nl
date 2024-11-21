@@ -46,7 +46,7 @@ export default async function Post(props: {
 
   return (
     <div className="space-y-4">
-      <div className="flex justify-between items-center">
+      <div className="flex justify-start items-center">
         <Breadcrumb>
           <BreadcrumbList>
             <BreadcrumbItem>
@@ -58,10 +58,6 @@ export default async function Post(props: {
             </BreadcrumbItem>
           </BreadcrumbList>
         </Breadcrumb>
-
-        <p className="text-sm">
-          {post.date && format(new Date(post.date), "MMMM dd, yyyy")}
-        </p>
       </div>
 
       {/* @ts-ignore */}

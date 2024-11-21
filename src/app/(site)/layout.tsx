@@ -3,15 +3,15 @@ import { Header } from "@/components/header";
 
 const ITEMS = [
   {
-    label: "Works",
+    label: "works",
     href: "/works",
   },
   {
-    label: "About",
+    label: "about",
     href: "/about",
   },
   {
-    label: "Contact",
+    label: "contact",
     href: "/contact",
   },
 ];
@@ -22,11 +22,9 @@ export default function Layout({
   children: React.ReactNode;
 }>) {
   return (
-    <main className="flex flex-col gap-8 items-center w-screen min-h-screen">
+    <main className="flex flex-col gap-8 items-center w-screen h-screen">
       <Header items={ITEMS} />
-      <div className="w-full max-w-screen-md flex-auto min-h-0 px-8">
-        {children}
-      </div>
+      <div className="w-full max-w-screen-md flex-auto px-8">{children}</div>
       <Footer />
     </main>
   );

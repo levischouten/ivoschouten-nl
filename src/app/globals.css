@@ -72,11 +72,16 @@ body {
   article {
     @apply prose;
   }
+
   article a {
     @apply no-underline text-sm;
   }
 
   article p {
     @apply text-sm;
+  }
+
+  article h1 {
+    @apply text-2xl font-bold;
   }
 }
