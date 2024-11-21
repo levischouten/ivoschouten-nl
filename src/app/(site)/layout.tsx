@@ -1,3 +1,4 @@
+import { Footer } from "@/components/Footer";
 import { Header } from "@/components/header";
 
 const ITEMS = [
@@ -21,11 +22,12 @@ export default function Layout({
   children: React.ReactNode;
 }>) {
   return (
-    <main className="flex flex-col gap-8 items-center w-screen h-screen">
+    <main className="flex flex-col gap-8 items-center w-screen min-h-screen">
       <Header items={ITEMS} />
       <div className="w-full max-w-screen-md flex-auto min-h-0 px-8">
         {children}
       </div>
+      <Footer />
     </main>
   );
 }

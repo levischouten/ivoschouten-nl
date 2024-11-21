@@ -72,4 +72,11 @@ body {
   article {
     @apply prose;
   }
+  article a {
+    @apply no-underline text-sm;
+  }
+
+  article p {
+    @apply text-sm;
+  }
 }
