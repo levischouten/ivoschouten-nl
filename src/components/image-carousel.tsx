@@ -36,7 +36,6 @@ export function ImageCarousel(props: ImageCarouselProps) {
                 height={500}
                 className="w-auto h-full object-contain"
               />
-              <p className="text-center">{item.label}</p>
             </div>
           </CarouselItem>
         ))}
