@@ -1,18 +1,16 @@
 import { createReader } from "@keystatic/core/reader";
 import React from "react";
 import Markdoc from "@markdoc/markdoc";
-import { format } from "date-fns";
 
 import keystaticConfig from "../../../../../keystatic.config";
 import {
   Breadcrumb,
-  BreadcrumbList,
   BreadcrumbItem,
   BreadcrumbLink,
-  BreadcrumbSeparator,
+  BreadcrumbList,
   BreadcrumbPage,
+  BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
-import { Metadata } from "next";
 
 const reader = createReader(process.cwd(), keystaticConfig);
 
@@ -60,7 +58,7 @@ export default async function Post(props: {
         </Breadcrumb>
       </div>
 
-      {/* @ts-ignore */}
+      {/* @ts-expect-error mismatch in React type */}
       {Markdoc.renderers.react(renderable, React)}
     </div>
   );

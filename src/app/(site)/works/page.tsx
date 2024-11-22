@@ -3,7 +3,6 @@ import keystaticConfig from "../../../../keystatic.config";
 
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowTopRightIcon } from "@radix-ui/react-icons";
 
 const reader = createReader(process.cwd(), keystaticConfig);
 

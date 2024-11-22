@@ -1,4 +1,3 @@
-import { Metadata, ResolvingMetadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { createReader } from "@keystatic/core/reader";

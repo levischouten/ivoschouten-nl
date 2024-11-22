@@ -18,6 +18,6 @@ export default async function Contact() {
 
   const renderable = Markdoc.transform(node);
 
-  // @ts-ignore
+  // @ts-expect-error mismatch in React type
   return Markdoc.renderers.react(renderable, React);
 }
