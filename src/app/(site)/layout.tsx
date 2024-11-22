@@ -22,7 +22,7 @@ export default function Layout({
   children: React.ReactNode;
 }>) {
   return (
-    <main className="flex flex-col gap-8 items-center w-screen h-screen">
+    <main className="flex flex-col gap-8 items-center h-screen">
       <Header items={ITEMS} />
       <div className="w-full max-w-screen-md flex-auto px-8">{children}</div>
       <Footer />

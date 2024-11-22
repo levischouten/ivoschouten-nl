@@ -1,6 +1,7 @@
 import { createReader } from "@keystatic/core/reader";
 import React from "react";
 import Markdoc from "@markdoc/markdoc";
+import { components, config } from "@/markdoc/config";
 
 import keystaticConfig from "../../../../../keystatic.config";
 import {
@@ -33,14 +34,14 @@ export default async function Post(props: {
   }
 
   const { node } = await post.content();
-  const errors = Markdoc.validate(node);
+  const errors = Markdoc.validate(node, config);
 
   if (errors.length) {
     console.error(errors);
     throw new Error("Invalid content");
   }
 
-  const renderable = Markdoc.transform(node);
+  const renderable = Markdoc.transform(node, config);
 
   return (
     <div className="space-y-4">
@@ -59,7 +60,7 @@ export default async function Post(props: {
       </div>
 
       {/* @ts-expect-error mismatch in React type */}
-      {Markdoc.renderers.react(renderable, React)}
+      {Markdoc.renderers.react(renderable, React, { components })}
     </div>
   );
 }

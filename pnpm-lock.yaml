@@ -14,6 +14,9 @@ dependencies:
   '@markdoc/markdoc':
     specifier: ^0.4.0
     version: 0.4.0(@types/react@18.0.0)(react@19.0.0-rc-02c0e824-20241028)
+  '@markdoc/next.js':
+    specifier: ^0.3.7
+    version: 0.3.7(@markdoc/markdoc@0.4.0)(next@15.0.2)(react@19.0.0-rc-02c0e824-20241028)
   '@radix-ui/react-collapsible':
     specifier: ^1.1.1
     version: 1.1.1(@types/react-dom@18.0.0)(@types/react@18.0.0)(react-dom@19.0.0-rc-02c0e824-20241028)(react@19.0.0-rc-02c0e824-20241028)
@@ -919,6 +922,19 @@ packages:
       react: 19.0.0-rc-02c0e824-20241028
     optionalDependencies:
       '@types/markdown-it': 12.2.3
+    dev: false
+
+  /@markdoc/next.js@0.3.7(@markdoc/markdoc@0.4.0)(next@15.0.2)(react@19.0.0-rc-02c0e824-20241028):
+    resolution: {integrity: sha512-lp/J0Lfx8YPWes82HOMSDvXBfIkJxPKfEwgzGTwfFBJUGBNM1TBvchaaAzDP2X+HRORP4jNcGbJrZoXSdon0BQ==}
+    peerDependencies:
+      '@markdoc/markdoc': '*'
+      next: '*'
+      react: '*'
+    dependencies:
+      '@markdoc/markdoc': 0.4.0(@types/react@18.0.0)(react@19.0.0-rc-02c0e824-20241028)
+      js-yaml: 4.1.0
+      next: 15.0.2(react-dom@19.0.0-rc-02c0e824-20241028)(react@19.0.0-rc-02c0e824-20241028)
+      react: 19.0.0-rc-02c0e824-20241028
     dev: false
 
   /@next/env@15.0.2:
