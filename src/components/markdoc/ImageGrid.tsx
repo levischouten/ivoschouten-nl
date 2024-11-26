@@ -1,4 +1,16 @@
+"use client";
+
 import Image from "next/image";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import React from "react";
+// @ts-ignore
+import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 
 type ImageGridProps = {
   images: {
@@ -8,19 +20,45 @@ type ImageGridProps = {
 };
 
 export function ImageGrid(props: ImageGridProps) {
+  const [selectedImage, setSelectedImage] = React.useState<{
+    label: string;
+    image: string;
+  }>(props.images[0]);
+
   return (
     <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 my-8">
-      {props.images.map((item) => (
-        <div key={item.label}>
+      <Dialog>
+        {props.images.map((item, i) => (
+          <div key={i}>
+            <DialogTrigger asChild>
+              <Image
+                src={item.image}
+                alt={item.label}
+                width={400}
+                height={400}
+                className="h-auto w-full object-cover mx-auto my-0 aspect-square hover:cursor-pointer"
+                onClick={() => setSelectedImage(item)}
+              />
+            </DialogTrigger>
+          </div>
+        ))}
+        <DialogContent
+          className="bg-transparent border-none p-0 outline-none"
+          aria-describedby="something filled in"
+        >
+          <VisuallyHidden>
+            <DialogTitle>{selectedImage.label}</DialogTitle>
+            <DialogDescription>{selectedImage.label}</DialogDescription>
+          </VisuallyHidden>
           <Image
-            src={item.image}
-            alt={item.label}
+            src={selectedImage.image}
+            alt={selectedImage.label}
             width={400}
             height={400}
-            className="h-auto w-full object-cover mx-auto my-0 aspect-square"
+            className="h-auto w-full object-cover mx-auto my-0 aspect-square hover:cursor-pointer"
           />
-        </div>
-      ))}
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }
