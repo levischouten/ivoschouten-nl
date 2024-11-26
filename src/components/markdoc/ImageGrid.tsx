@@ -23,7 +23,7 @@ export function ImageGrid(props: ImageGridProps) {
   const [selectedImage, setSelectedImage] = React.useState<{
     label: string;
     image: string;
-  }>(props.images[0]);
+  }>(null!);
 
   return (
     <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 my-8">
@@ -44,12 +44,12 @@ export function ImageGrid(props: ImageGridProps) {
         ))}
         <DialogContent className="bg-transparent border-none p-4 outline-none">
           <VisuallyHidden>
-            <DialogTitle>{selectedImage.label}</DialogTitle>
-            <DialogDescription>{selectedImage.label}</DialogDescription>
+            <DialogTitle>{selectedImage?.label}</DialogTitle>
+            <DialogDescription>{selectedImage?.label}</DialogDescription>
           </VisuallyHidden>
           <Image
-            src={selectedImage.image}
-            alt={selectedImage.label}
+            src={selectedImage?.image}
+            alt={selectedImage?.label}
             width={400}
             height={400}
             className="h-auto w-full mx-auto my-0 hover:cursor-pointer"
