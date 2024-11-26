@@ -42,10 +42,7 @@ export function ImageGrid(props: ImageGridProps) {
             </DialogTrigger>
           </div>
         ))}
-        <DialogContent
-          className="bg-transparent border-none p-0 outline-none"
-          aria-describedby="something filled in"
-        >
+        <DialogContent className="bg-transparent border-none p-4 outline-none">
           <VisuallyHidden>
             <DialogTitle>{selectedImage.label}</DialogTitle>
             <DialogDescription>{selectedImage.label}</DialogDescription>
@@ -55,7 +52,7 @@ export function ImageGrid(props: ImageGridProps) {
             alt={selectedImage.label}
             width={400}
             height={400}
-            className="h-auto w-full object-cover mx-auto my-0 aspect-square hover:cursor-pointer"
+            className="h-auto w-full mx-auto my-0 hover:cursor-pointer"
           />
         </DialogContent>
       </Dialog>
