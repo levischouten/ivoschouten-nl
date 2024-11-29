@@ -49,10 +49,10 @@ export function ImageGrid(props: ImageGridProps) {
           </VisuallyHidden>
           <Image
             src={selectedImage?.image}
-            alt={selectedImage?.label}
+            alt={selectedImage?.label || "Placeholder text"}
             width={400}
             height={400}
-            className="h-auto w-full mx-auto my-0 hover:cursor-pointer"
+            className="h-auto w-full mx-auto my-0 object-contain"
           />
         </DialogContent>
       </Dialog>
