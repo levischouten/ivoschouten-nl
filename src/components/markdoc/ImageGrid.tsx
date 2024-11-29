@@ -33,7 +33,7 @@ export function ImageGrid(props: ImageGridProps) {
             <DialogTrigger asChild>
               <Image
                 src={item.image}
-                alt={item.label}
+                alt={item.label || "Placeholder text"}
                 width={400}
                 height={400}
                 className="h-auto w-full object-cover mx-auto my-0 aspect-square hover:cursor-pointer"

@@ -49,7 +49,7 @@ export default async function Post(props: {
         <Breadcrumb>
           <BreadcrumbList>
             <BreadcrumbItem>
-              <BreadcrumbLink href="/works">Works</BreadcrumbLink>
+              <BreadcrumbLink href="/works">works</BreadcrumbLink>
             </BreadcrumbItem>
             <BreadcrumbSeparator />
             <BreadcrumbItem>
