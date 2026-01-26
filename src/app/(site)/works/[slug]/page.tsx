@@ -59,7 +59,6 @@ export default async function Post(props: {
         </Breadcrumb>
       </div>
 
-      {/* @ts-expect-error mismatch in React type */}
       {Markdoc.renderers.react(renderable, React, { components })}
     </div>
   );

@@ -9,7 +9,6 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import React from "react";
-// @ts-expect-error mismatch in React type
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 
 type ImageGridProps = {

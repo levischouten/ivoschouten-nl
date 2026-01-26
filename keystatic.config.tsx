@@ -109,9 +109,7 @@ export default config({
             video: block({
               label: "Video",
               description: "Upload a video",
-              // @ts-expect-error mismatch in React type
               icon: <VideoIcon />,
-              // @ts-expect-error mismatch in React type
               ContentView: ({ value }) => {
                 const { src, ...props } = value;
 
@@ -119,7 +117,7 @@ export default config({
                   return null;
                 }
 
-                const blob = new Blob([src.data], { type: "video/mp4" });
+                const blob = new Blob([src.data as BlobPart], { type: "video/mp4" });
                 const url = URL.createObjectURL(blob);
 
                 return <Video src={url} {...props} />;
@@ -151,9 +149,7 @@ export default config({
             imageGrid: block({
               label: "Image Grid",
               description: "Display a grid of images",
-              // @ts-expect-error mismatch in React type
               icon: <LayoutGridIcon />,
-              // @ts-expect-error mismatch in React type
               ContentView: ({ value }) => {
                 const images = value.images
                   .map((item) => {
@@ -161,7 +157,7 @@ export default config({
                       return null;
                     }
 
-                    const blob = new Blob([item.image?.data], {
+                    const blob = new Blob([item.image?.data as BlobPart], {
                       type: "image/jpeg",
                     });
                     const image = URL.createObjectURL(blob);
